@@ -6,10 +6,7 @@
 
 ## Installation
 
-> Clone and npm / yarn install, then run each sample directly
-```javascript
-node mutable.js
-```
+> Clone, then run each sample directly
 
 ## Work through them in order of
 

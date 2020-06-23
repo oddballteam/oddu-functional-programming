@@ -1,8 +1,5 @@
 // Partial Application
 // Whenever a curried function has some, but not all of it's data
-const multiplyBy = x => y => x * y; 
-const multiplyByPrice = multiplyBy(9);
-
 const getTaxForItems = t => x => y => {
     const multiplied = x * y;
     return (t * multiplied) + multiplied;

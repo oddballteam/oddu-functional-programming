@@ -1,6 +1,6 @@
 # OddU Functional Programming
 
-Reference: [#OddU Presentation](https://docs.google.com/presentation/d/1zLgnnxEJfAcsbzWgEFVzlb_nXHY3B9uM8YJWhMgYHKk)
+Reference: [#OddU Presentation](https://github.com/oddballteam/oddu-functional-programming/blob/master/presentation.pdf)
 
 ## Introduction
 

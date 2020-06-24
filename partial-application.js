@@ -1,8 +1,8 @@
 // Partial Application
 // Whenever a curried function has some, but not all of it's data
-const getTaxForItems = t => x => y => {
-    const multiplied = x * y;
-    return (t * multiplied) + multiplied;
+const getTaxForItems = tax => price => qty => {
+    const multiplied = price * qty;
+    return (tax * multiplied) + multiplied;
 }
 
 // Set state Tax Curry

@@ -1,8 +1,11 @@
 # OddU Functional Programming
 
+Reference: [#OddU Presentation](https://docs.google.com/presentation/d/1zLgnnxEJfAcsbzWgEFVzlb_nXHY3B9uM8YJWhMgYHKk)
+
 ## Introduction
 
-> Samples of FP and how to use them and where
+> Samples of FP and how to use them and when.
+
 
 ## Installation
 

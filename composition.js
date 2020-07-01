@@ -5,8 +5,6 @@ const scream = str => str.toUpperCase();
 const exclaim = str => `${str}!`;
 const repeat = str => `${str} ${str}`;
 
-console.log(repeat(exclaim(scream('Oddball Rocks')))); //ODDBALL ROCKS! ODDBALL ROCKS!
-
 // Create compose function
 
 // Take a list of function and compose them in reverse (so its readable) and make

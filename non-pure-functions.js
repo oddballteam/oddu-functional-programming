@@ -16,7 +16,7 @@ addItem(); //Set to 1 product
  * something changed, we get 18
  */
 setTimeout(() => {
-console.log('Impure Expects 9', getTotal())
+    console.log('Impure Expects 9', getTotal())
 }, 1000);
    
    

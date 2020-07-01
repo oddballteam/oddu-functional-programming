@@ -20,8 +20,8 @@ const displayCartAnotherWay = (itemsInCart) => {
 }
 
 // Show basic Cart
-displayCart(cartItems);
-displayCartAnotherWay(cartItems);
+// displayCart(cartItems);
+// displayCartAnotherWay(cartItems);
 
 //Pure Get Total Function (no dependencies or side effects)
 const getTotal = (productList) => { //Take Product List
@@ -33,7 +33,7 @@ const getTotal = (productList) => { //Take Product List
 //Whats the cart total?
 console.log(`Total: \$${getTotal(cartItems)}`);
 
-// Show A Total With the Cart?
+// // Show A Total With the Cart?
 displayCart(cartItems);
 console.log(`Total: \$${getTotal(cartItems)}`);
 console.log('-------');

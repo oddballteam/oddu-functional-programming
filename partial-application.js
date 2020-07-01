@@ -7,11 +7,13 @@ const getTaxForItems = tax => price => qty => {
 }
 
 // Set state Tax Curry
+// These become immutable versions of the tax
 const taxTheFloridaItems = getTaxForItems(.07); // Set 't' tax to 7%
 const taxTheCaliforniaItems = getTaxForItems(.90); // Set 't' tax to 90%
 
 // Set state calculation for total pure function
 //Set 'x' price to $9 for Florida and $20 for California;
+// These become immutable versions of the tax with the price
 const floridaPriceWithTax = taxTheFloridaItems(9); 
 const californiaPriceWithTax = taxTheCaliforniaItems(20);
 

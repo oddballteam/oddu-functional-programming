@@ -33,26 +33,10 @@ const getTotal = (productList) => { //Take Product List
 //Whats the cart total?
 console.log(`Total: \$${getTotal(cartItems)}`);
 
-// Higher Order function to add Totaling
-const withTotal = fn => { //takes a displayCart function
-    return (...args) => {
-        const cartTotal = getTotal(...args);
-        console.log(`Cart Total \$${cartTotal}`);
-        return fn(...args);
-    }
-}
-
-
-
-//New function with Total
-const displayCartWithTotal = withTotal(displayCart);
-const displayCartAnotherWayWithTotal = withTotal(displayCartAnotherWay);
-
-// Use new function instead
-displayCartWithTotal(cartItems);
+// Show A Total With the Cart?
+displayCart(cartItems);
+console.log(`Total: \$${getTotal(cartItems)}`);
+console.log('-------');
+displayCartAnotherWay(cartItems);
+console.log(`Total: \$${getTotal(cartItems)}`);
 console.log('---------------------');
-displayCartAnotherWayWithTotal(cartItems);
-
-
-
-

@@ -1,4 +1,5 @@
 // Partial Application
+
 // Whenever a curried function has some, but not all of it's data
 const getTaxForItems = tax => price => qty => {
     const multiplied = price * qty;

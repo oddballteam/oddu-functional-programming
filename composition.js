@@ -1,12 +1,6 @@
 // Composition
 // Combining multiple functions so the output is chained
 
-const double = x => x * 2;
-const triple = x => x * 3;
-const half = x => x / 2;
-console.log(double(triple(5))); //30
-console.log(half(triple(double(5)))); //15 -- gets ugly, quick.
-
 const scream = str => str.toUpperCase();
 const exclaim = str => `${str}!`;
 const repeat = str => `${str} ${str}`;

@@ -1,66 +1,26 @@
 // Pure Functions
-const f = x => x + 1; // f(6) will ALWAYS return 7
-
-//Impure Function
-let count = 0;
-let price = 9;
-const addItem = () => {
-    count++;
-}
-
-const getTotal = () => count * price;
-
-/**
- * Save for later, we think we should get 0
- * But, because we took too long AND
- * something changed, we get 18
- */
-setTimeout(() => {
- console.log('Impure Expects 0', getTotal())
-}, 1000);
-
-
-console.log('Impure Expects 0', getTotal()); //0
-addItem();
-addItem();
-console.log('Impure Expects 18', getTotal()); //18
-
-/**********************************************
- * Better solution
- */
-
- // Curried Multiplying
-const multiplyBy = x => y => x * y; 
-const multiplyByPrice = multiplyBy(9);
+// const f = x => x + 1; // f(6) will ALWAYS return 7
 
 const pureAddItem = (currentTotal = 0) => currentTotal + 1;
-const oneItemCount = pureAddItem();
+const pureGetTotal = (itemCount, price) => itemCount * price;
 
+const oneItemCount = pureAddItem(); //set to one product
+
+/**
+ * Save for later, we think we should get 9
+ * and because this is pure, we will always get 9
+ */
 setTimeout(() => {
- console.log('Pure Expected 1x9 = 9', multiplyByPrice(oneItemCount));
+ console.log('Pure Expected 1 x 9 = 9', pureGetTotal(oneItemCount, 9));
 }, 1000);
 
 const twoItemsCount = pureAddItem(oneItemCount);
-console.log('Pure Expected 2x9 = 18', multiplyByPrice(twoItemsCount));
+console.log('Pure Expected 2 x 9 = 18', pureGetTotal(twoItemsCount, 9));
 
 const threeItemsCount = pureAddItem(twoItemsCount);
-console.log('Pure Expected 3x9 = 27', multiplyByPrice(threeItemsCount));
+console.log('Pure Expected 3 x 9 = 27', pureGetTotal(threeItemsCount, 9));
 
-
-//===========  More Examples
-
-//Impure generator
-// This function can't reliably be tested because it 
-// outputs differently even with the same input
-const createItem = (name, price) => ({
-    id: Math.floor(Math.random() * 1000),
-    name,
-    price
-})
-
-console.log(createItem('Peanuts', 10)); // { id: 89, name: 'Peanuts', price: 10 }
-console.log(createItem('Peanuts', 10)); // { id: 22, name: 'Peanuts', price: 10 }
-console.log(createItem('Peanuts', 10)); // { id: 100, name: 'Peanuts', price: 10 }
+//--- PURE Generator/Factory Example
 
 // Better Example
 // Yeah, i know - this should be curried, it's just an example!
